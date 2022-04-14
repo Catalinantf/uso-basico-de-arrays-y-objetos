@@ -137,15 +137,15 @@ let dental = [{
 // Resúmenes con primera y última atención
 
 console.log(radiologia.length);
-let resumenRadiologia = (`<h3>Atención Radiología</h3> <p>Primera atención: ${radiologia[0].PACIENTE} | ${radiologia[0].PREVISIÓN} | Última atención: ${radiologia[4].PACIENTE}  | ${radiologia[4].PREVISIÓN} </p>`);
+let resumenRadiologia = (`<h3>Atención Radiología</h3> <p>Primera atención: ${radiologia[0].PACIENTE} | ${radiologia[0].PREVISIÓN} | Última atención: ${radiologia[radiologia.length - 1].PACIENTE}  | ${radiologia[radiologia.length - 1].PREVISIÓN} </p>`);
 document.getElementById("atencion-radiologia").innerHTML = resumenRadiologia;
 
 console.log(traumatologia.length);
-let resumenTraumatologia = (`<h3>Atención Traumatología</h3> <p>Primera atención: ${traumatologia[0].PACIENTE} | ${traumatologia[0].PREVISIÓN} | Última atención: ${traumatologia[6].PACIENTE}  | ${traumatologia[6].PREVISIÓN} </p>`);
+let resumenTraumatologia = (`<h3>Atención Traumatología</h3> <p>Primera atención: ${traumatologia[0].PACIENTE} | ${traumatologia[0].PREVISIÓN} | Última atención: ${traumatologia[traumatologia.length - 1].PACIENTE}  | ${traumatologia[traumatologia.length - 1].PREVISIÓN} </p>`);
 document.getElementById("atencion-traumatologia").innerHTML = resumenTraumatologia;
 
 console.log(dental.length);
-let resumenDental = (`<h3>Atención Dental</h3> <p>Primera atención: ${dental[0].PACIENTE} | ${dental[0].PREVISIÓN} | Última atención: ${dental[5].PACIENTE}  | ${dental[5].PREVISIÓN} </p>`)
+let resumenDental = (`<h3>Atención Dental</h3> <p>Primera atención: ${dental[0].PACIENTE} | ${dental[0].PREVISIÓN} | Última atención: ${dental[dental.length - 1].PACIENTE}  | ${dental[dental.length - 1].PREVISIÓN} </p>`)
 document.getElementById("atencion-dental").innerHTML = resumenDental;
 
 
@@ -182,11 +182,11 @@ let textoDental = `
 
 for (let i = 0; i < radiologia.length; i++) {
     textoRadiologia += `<tr>
-    <td>${radiologia[i].HORA}</td>
-    <td>${radiologia[i].ESPECIALISTA}</td>
-    <td>${radiologia[i].PACIENTE}</td>
-    <td>${radiologia[i].RUT}</td>
-    <td>${radiologia[i].PREVISIÓN}</td>
+    <td>${radiologia[i].HORA }</td>
+    <td>${radiologia[i].ESPECIALISTA }</td>
+    <td>${radiologia[i].PACIENTE }</td>
+    <td>${radiologia[i].RUT }</td>
+    <td>${radiologia[i].PREVISIÓN }</td>
     </tr>`;
 }
 document.getElementById("tabla-radiologia").innerHTML = textoRadiologia
